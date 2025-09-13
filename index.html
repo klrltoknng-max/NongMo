@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หายงอนน้องเอยัง</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background-color: #fdf6e3; }
+        input { padding: 5px; font-size: 16px; }
+        button { padding: 5px 10px; font-size: 16px; }
+        #chat { margin-top: 20px; }
+        .message { margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>หายงอนน้องเอยังงงงงงง</h1>
+    <p>ตอบ y = หายแล้ววววววว , n = ยังงงงง</p>
+
+    <input type="text" id="userInput" placeholder="ใส่ y หรือ n">
+    <button onclick="checkInput()">ส่ง</button>
+
+    <div id="chat"></div>
+
+    <script>
+        function checkInput() {
+            const inputBox = document.getElementById('userInput');
+            const input = inputBox.value.trim().toLowerCase();
+            const chat = document.getElementById('chat');
+
+            if(input === 'y') {
+                chat.innerHTML += '<div class="message">🟢 เย้ รักน้องโมมมมมม 😄</div>';
+            } else if(input === 'n') {
+                chat.innerHTML += '<div class="message">🟡 หายยยยยยยยยย 😅</div>';
+            } else {
+                chat.innerHTML += '<div class="message">🔴 ใส่ให้ถูกสิห้วยยยยยย 😜</div>';
+            }
+
+            inputBox.value = '';
+            inputBox.focus();
+        }
+    </script>
+</body>
+</html>
